@@ -1,27 +1,17 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "target": "ES2022",
-    "useDefineForClassFields": true,
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    "moduleDetection": "force",
-    "noEmit": true,
     "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "types": ["vite/client"],
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
 
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "baseUrl": ".",               // <-- re-déclaré ici pour l'app
+    "paths": { "@/*": ["src/*"] } // <-- alias aussi ici pour que TS l'applique au code frontend
   },
   "include": ["src"]
 }

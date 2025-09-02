@@ -4,6 +4,7 @@ import Register from "./Register";
 //import Dashboard from "./Dashboard";
 //import Profile from "./Profile";
 import Layout from "@/components/Layout";
+import PublicHubPage from "@/pages/PublicHubPage";
 
 export default function App() {
   return (
@@ -12,7 +13,8 @@ export default function App() {
         <Route path="/" element={<Navigate to="/login" />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-      </Route>
+      <Route path="/hub" element={<PublicHubPage />} />
+      <Route path="*" element={<h1 className="p-10 text-center">404 Not Found</h1>} />
     </Routes>
   );
 }

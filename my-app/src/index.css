@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Optionnel : base légère utile */
 @layer base {
   html, body, #root { height: 100%; }
-  body { @apply bg-slate-950 text-slate-100 antialiased; }
-  a { @apply text-indigo-400 hover:text-indigo-300; }
+
+  body { @apply bg-white text-slate-900 antialiased; }
+
+
+  .dark body { @apply bg-slate-950 text-slate-100; }
+
+
+  a { @apply text-lilacDream-400 hover:text-lilacDream-300; }
+  .dark a { @apply text-pinkDream-300 hover:text-pinkDream-200; }
 }

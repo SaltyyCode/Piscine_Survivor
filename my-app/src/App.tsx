@@ -5,6 +5,7 @@ import Register from "./Register";
 //import Profile from "./Profile";
 import Layout from "@/components/Layout";
 import PublicHubPage from "@/pages/PublicHubPage";
+import PublicLayout from "@/layouts/PublicLayout";
 
 export default function App() {
   return (

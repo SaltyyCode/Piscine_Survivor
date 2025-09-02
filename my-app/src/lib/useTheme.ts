@@ -8,9 +8,6 @@ export function useTheme() {
     const saved = localStorage.getItem(KEY) as Theme | null;
     return saved ?? "light";
   });
-
-  useEffect(() => {
-    const root = document.documentElement;
     if (theme === "dark") {
       root.classList.add("dark");
     } else {

@@ -1,19 +1,18 @@
 export default function StatsStrip() {
     return (
         <section>
-            {/* TODO: remplacer ces chiffres par un endpoint /api/stats plus tard */}
-            <div className="grid grid-cols-3 gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 text-center">
+            <div className="grid grid-cols-3 gap-4 rounded-2xl border p-4 text-center bg-white/70 dark:bg-[#141422]/70 border-lilac-100/60 dark:border-[#26263c] shadow-sm">
                 <div>
-                    <div className="text-2xl font-semibold">120+</div>
-                    <div className="text-xs uppercase tracking-wide text-white/70">Startups</div>
+                    <div className="text-2xl font-semibold text-slate-800 dark:text-white">120+</div>
+                    <div className="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">Startups</div>
                 </div>
                 <div>
-                    <div className="text-2xl font-semibold">€80M</div>
-                    <div className="text-xs uppercase tracking-wide text-white/70">Levés</div>
+                    <div className="text-2xl font-semibold text-slate-800 dark:text-white">€80M</div>
+                    <div className="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">Levés</div>
                 </div>
                 <div>
-                    <div className="text-2xl font-semibold">50+</div>
-                    <div className="text-xs uppercase tracking-wide text-white/70">Events/an</div>
+                    <div className="text-2xl font-semibold text-slate-800 dark:text-white">50+</div>
+                    <div className="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">Events/an</div>
                 </div>
             </div>
         </section>

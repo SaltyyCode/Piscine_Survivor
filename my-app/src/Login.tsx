@@ -53,15 +53,13 @@ export default function Login() {
           <div className="grid grid-cols-2 gap-3">
             <Button
               variant="ghost"
-              className="border border-slate-300 text-slate-700 hover:bg-slate-100 
-                         dark:border-[#2d2d55] dark:text-white dark:hover:bg-slate-800/50"
+              className="bg-[#1d1d2e] border border-[#2d2d55] text-white hover:bg-[#242438] transition"
             >
               Google
             </Button>
             <Button
               variant="ghost"
-              className="border border-slate-300 text-slate-700 hover:bg-slate-100 
-                         dark:border-[#2d2d55] dark:text-white dark:hover:bg-slate-800/50"
+              className="bg-[#1d1d2e] border border-[#2d2d55] text-white hover:bg-[#242438] transition"
             >
               GitHub
             </Button>
@@ -70,7 +68,7 @@ export default function Login() {
         footer={
           <>
             Pas de compte ?{" "}
-            <Link to="/register" className="text-lilacDream-400 hover:text-lilacDream-300 dark:text-pinkDream-300 dark:hover:text-pinkDream-200">
+            <Link to="/register" className="text-lilac-400 hover:text-lilac-300 dark:text-rose-200 dark:hover:text-rose-100">
               Créer un compte
             </Link>
           </>
@@ -105,7 +103,7 @@ export default function Login() {
               onChange={(e) => setForm({ ...form, remember: e.currentTarget.checked })}
               label="Se souvenir de moi"
             />
-            <a href="#" className="text-sm text-lilacDream-400 hover:text-lilacDream-300 dark:text-pinkDream-300 dark:hover:text-pinkDream-200">
+            <a href="#" className="text-sm text-lilac-400 hover:text-lilac-300 dark:text-rose-200 dark:hover:text-rose-100">
               Mot de passe oublié ?
             </a>
           </div>
@@ -113,9 +111,7 @@ export default function Login() {
           <Button
             type="submit"
             loading={loading}
-            className="w-full font-medium 
-                       bg-pinkDream-300 hover:bg-pinkDream-200 text-white
-                       dark:bg-lilacDream-300 dark:hover:bg-lilacDream-200 dark:text-black"
+            className="w-full bg-rose-300 hover:bg-rose-200 text-white dark:bg-lilac-300 dark:hover:bg-lilac-200 dark:text-black"
           >
             Se connecter
           </Button>

@@ -27,7 +27,7 @@ npm install
 Still in the backend folder, run:
 ```
 npx prisma generate
-npx prisma push db
+npx prisma db push
 ```
 This will create the database schema in your PostgreSQL database
 

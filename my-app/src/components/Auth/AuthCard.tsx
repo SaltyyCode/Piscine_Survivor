@@ -6,7 +6,8 @@ type Props = {
   children: ReactNode;
   footer?: ReactNode;   // ex: “Déjà un compte ? …”
   socials?: ReactNode;  // ex: boutons Google/GitHub
-  icon?: ReactNode;     // ex: logo
+  icon?: ReactNode;    // ex: logo
+  className?: string;
 };
 
 export default function AuthCard({ title, subtitle, children, footer, socials, icon }: Props) {

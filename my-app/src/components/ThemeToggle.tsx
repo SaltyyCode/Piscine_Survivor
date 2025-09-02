@@ -1,15 +1,22 @@
-import { useTheme } from "@/lib/useTheme";
+import { useThemeContext } from "@/contexts/ThemeContext";
 import { Sun, Moon } from "lucide-react";
 
 export default function ThemeToggle() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useThemeContext();
 
   return (
     <button
       onClick={toggleTheme}
-      className="fixed bottom-4 right-4 p-2 rounded-full bg-slate-800 text-white dark:bg-slate-200 dark:text-black"
+      aria-label="Basculer le thème"
+      className="
+        fixed bottom-4 right-4 p-3 rounded-full shadow-card
+        bg-lilacDream-400 text-white
+        hover:bg-lilacDream-300
+        active:scale-95 transition
+        dark:bg-pinkDream-300 dark:text-black dark:hover:bg-pinkDream-200
+      "
     >
-      {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+      {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
     </button>
   );
 }

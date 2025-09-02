@@ -1,19 +1,27 @@
 import { useEffect, useState } from "react";
 
+type Theme = "light" | "dark";
+const KEY = "theme";
+
 export function useTheme() {
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
+  const [theme, setTheme] = useState<Theme>(() => {
+    const saved = localStorage.getItem(KEY) as Theme | null;
+    return saved ?? "light";
+  });
 
   useEffect(() => {
+    const root = document.documentElement;
     if (theme === "dark") {
-      document.documentElement.classList.add("dark");
+      root.classList.add("dark");
     } else {
-      document.documentElement.classList.remove("dark");
+      root.classList.remove("dark");
     }
+    localStorage.setItem(KEY, theme);
   }, [theme]);
 
-  function toggleTheme() {
-    setTheme(theme === "dark" ? "light" : "dark");
-  }
+  const toggleTheme = () => {
+    setTheme((t) => (t === "dark" ? "light" : "dark"));
+  };
 
-  return { theme, toggleTheme };
+  return { theme, toggleTheme, setTheme };
 }

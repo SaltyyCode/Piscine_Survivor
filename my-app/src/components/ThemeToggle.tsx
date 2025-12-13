@@ -10,10 +10,9 @@ export default function ThemeToggle() {
       aria-label="Basculer le thème"
       className="
         fixed bottom-4 right-4 p-3 rounded-full shadow-card
-        bg-lilacDream-400 text-white
-        hover:bg-lilacDream-300
+        bg-lilac-400 text-white hover:bg-lilac-300
         active:scale-95 transition
-        dark:bg-pinkDream-300 dark:text-black dark:hover:bg-pinkDream-200
+        dark:bg-rose-300 dark:text-black dark:hover:bg-rose-200
       "
     >
       {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}

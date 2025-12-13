@@ -39,15 +39,13 @@ export default function Register() {
           <div className="grid grid-cols-2 gap-3">
             <Button
               variant="ghost"
-              className="border border-slate-300 text-slate-700 hover:bg-slate-100 
-                         dark:border-[#2d2d55] dark:text-white dark:hover:bg-slate-800/50"
+              className="bg-[#1d1d2e] border border-[#2d2d55] text-white hover:bg-[#242438] transition"
             >
               Google
             </Button>
             <Button
               variant="ghost"
-              className="border border-slate-300 text-slate-700 hover:bg-slate-100 
-                         dark:border-[#2d2d55] dark:text-white dark:hover:bg-slate-800/50"
+              className="bg-[#1d1d2e] border border-[#2d2d55] text-white hover:bg-[#242438] transition"
             >
               GitHub
             </Button>
@@ -56,7 +54,7 @@ export default function Register() {
         footer={
           <>
             Déjà un compte ?{" "}
-            <Link to="/login" className="text-lilacDream-400 hover:text-lilacDream-300 dark:text-pinkDream-300 dark:hover:text-pinkDream-200">
+            <Link to="/login" className="text-lilac-400 hover:text-lilac-300 dark:text-rose-200 dark:hover:text-rose-100">
               Se connecter
             </Link>
           </>
@@ -75,21 +73,22 @@ export default function Register() {
               label={
                 <span>
                   J’accepte les{" "}
-                  <a className="text-lilacDream-400 hover:text-lilacDream-300 dark:text-pinkDream-300 dark:hover:text-pinkDream-200 underline-offset-2 hover:underline" href="#">
+                  <a
+                    className="text-lilac-400 hover:text-lilac-300 dark:text-rose-200 dark:hover:text-rose-100 underline-offset-2 hover:underline"
+                    href="#"
+                  >
                     CGU
                   </a>.
                 </span>
               }
             />
-            {errors.accept && <p className="mt-1 text-xs text-pinkDream-300 dark:text-lilacDream-300">{errors.accept.message}</p>}
+            {errors.accept && <p className="mt-1 text-xs text-rose-300 dark:text-lilac-300">{errors.accept.message}</p>}
           </div>
 
           <Button
             type="submit"
             loading={isSubmitting}
-            className="w-full font-medium 
-                       bg-lilacDream-400 hover:bg-lilacDream-300 text-white
-                       dark:bg-pinkDream-300 dark:hover:bg-pinkDream-200 dark:text-black"
+            className="w-full bg-lilac-400 hover:bg-lilac-300 text-white dark:bg-rose-300 dark:hover:bg-rose-200 dark:text-black"
           >
             Créer un compte
           </Button>

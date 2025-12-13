@@ -5,13 +5,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        pinkDream: {
+        rose: {
           50: '#F8CACF',
           100: '#F6AEAE',
           200: '#F49C9C',
           300: '#F18585',
         },
-        lilacDream: {
+        lilac: {
           50: '#EED5FB',
           100: '#E4BEF8',
           200: '#D5A8F2',

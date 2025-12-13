@@ -5,13 +5,12 @@ import ThemeToggle from "@/components/ThemeToggle";
 
 export default function PublicLayout() {
   return (
-    <div className="min-h-dvh flex flex-col bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors">
+    <div className="min-h-dvh flex flex-col transition-colors bg-gradient-to-br from-lilac-50 via-rose-50 to-rose-100 text-slate-900 dark:from-black dark:via-[#0d0d13] dark:to-[#141422] dark:text-white">
       <Header />
       <div className="flex-1">
         <Outlet />
       </div>
       <Footer />
-      {/* Global theme toggle */}
       <ThemeToggle />
     </div>
   );
